@@ -7,6 +7,8 @@ export default function ProductItem({id, title, price, description}) {
     const dispatch = useDispatch();
 
     function handleAddToCart() {
+        // and then send Http request
+        // fetch('firebase-url', { method: 'POST', body: JSON.stringify(newCart) })
         dispatch(cartActions.addItemToCart({
             id,
             title,
